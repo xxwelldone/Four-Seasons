@@ -16,19 +16,40 @@ function ativarLink (menu)
     }
 }
 //gets nav a elements and parse onto foreach to active function
-menu.forEach( ativarLink )
+menu.forEach( ativarLink );
 
-const tamanho = document.querySelector( "main > div" );
-tamanho.style.maxWidth = 1200 + "px";
-tamanho.style.margin = 0 + " " + "auto";
-tamanho.style.boxSizing = "border-box";
 
-const footer = document.querySelector( "footer" );
-footer.style.maxWidth = 1200 + "px";
-footer.style.margin = 0 + " " + "auto";
-footer.style.boxSizing = "border-box";
+/*****************Galery */
 
-const banner = document.querySelector( "wrap" );
-banner.style.maxWidth = 1200 + "px";
-banner.style.margin = 0 + " " + "auto";
-banner.style.boxSizing = "border-box";
+const imagens = document.querySelectorAll( "#galeria li img" );
+
+function trocatroca (event)
+{
+    const src = event.currentTarget.src;
+    const alt = event.currentTarget.alt;
+    const principal = document.querySelector( "#principal" );
+    principal.src = src;
+}
+
+function galeria ( imagem )
+{
+    imagem.addEventListener("click", trocatroca)
+}
+imagens.forEach(galeria)
+
+
+
+    const tamanho = document.querySelector( "main > div" );
+    tamanho.style.maxWidth = "1200" + "px";
+    tamanho.style.margin = "0" + " " + "auto";
+    tamanho.style.boxSizing = "border-box";
+    
+    const footer = document.querySelector( "footer" );
+    footer.style.maxWidth = "1200" + "px";
+    footer.style.margin = "0" + " " + "auto";
+    footer.style.boxSizing = "border-box";
+    
+    const banner = document.querySelector( "wrap" );
+    banner.style.maxWidth = "1200" + "px";
+    banner.style.margin = "0" + " " + "auto";
+    banner.style.boxSizing = "border-box";

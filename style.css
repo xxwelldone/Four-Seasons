@@ -8,7 +8,25 @@ body{
    place-content: center;
     
 }
-
+#galeria {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#galeria ul img {
+    width: 120px;
+}
+#galeria ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+#principal {
+    max-width: 500px;
+}
 .container {
     
     background-image: url('/image/bb.jpg');
