@@ -1,0 +1,264 @@
+body{
+    margin: 0rem;
+    width: 100vw;
+}
+/* Image*/
+.boxImage {
+    display: flex;
+   place-content: center;
+    
+}
+
+.container {
+    
+    background-image: url('/image/bb.jpg');
+    background-size: cover;
+    display: flex;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+    background-size: contain;
+    
+}
+@media (max-width: 750px) {
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+/* Menu */ 
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.menu {
+    display: flex;
+    gap: 1.25rem;
+        list-style: none;
+}
+.menu a {
+    background-color:#ebebf0;
+    padding: 1.25rem;
+    justify-items: space-evenly;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.menu a:nth-child(1):hover {
+    background-color: #bdbdc0;
+}
+.menu a:nth-child(2):hover {
+
+    background-color: #8faec1;
+    color: #fff;
+}
+.menu a:nth-child(3):hover {
+    background-color: #000000;
+    
+    color: #fff;
+}
+.menu a:nth-child(4):hover {
+    background-color: #d2070d;
+    
+    color: #fff;
+}
+@media (max-width: 750px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+/* First Block*/
+
+
+
+.history {
+    display: grid;
+    margin-top: 3.125rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr ;
+    padding: 3.125rem;
+    
+    background-color: #8faec1;
+   
+}
+.title {
+    color: #fff;
+    -webkit-text-stroke: 0.031rem #8e8e92;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size:5rem;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: baseline;
+    margin-right: 3rem;
+    
+}
+
+.text {
+    align-self: baseline;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.5rem;
+    color: #ffff;
+    max-width: 65ch;
+    
+}
+
+@media(max-width:750px){
+    .history {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+    }
+    .title {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 3rem;
+    }
+    .text {
+        font-size: 1rem;
+        grid-column: 1;
+        grid-row: 2;
+        
+    }
+}
+/* Scond Block */ 
+.timeline {
+    display: grid;
+    
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    padding: 3.125rem;
+    
+    background-color: #000000;
+}
+.musicGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 05fr;
+   /* margin: 3.125rem;*/
+    
+}
+
+.textTimeline {
+    color: #fff;
+    
+    text-align: start;
+    font-size: 1.3rem;
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 5rem;
+    
+    margin-bottom: 5rem;
+    margin-right: 12.5rem;
+}
+.playlist {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+iframe {
+    border: 1.5rem solid white;
+    /*box-sizing: border-box;*/
+   /* align-self: center;*/
+    
+}
+@media (max-width:750px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+       width: 100%;
+    }
+    .textTimeline {
+        color: #fff;
+        
+        text-align: start;
+        font-size: 1.3rem;
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 5rem;
+        
+        margin-bottom: 0rem;
+        margin-right: 0rem;
+    }
+    .musicGrid {
+        grid-template-rows: 0.5fr 1fr;
+        grid-row: 1;
+    }
+    .playlist {
+        grid-column: 1;
+        grid-row: 2;
+        
+        width: 60%;
+        
+    }
+    iframe {
+        border: 0.5rem solid white;
+    }
+    
+
+}
+/* Third Block */ 
+.musicVideo-bg {
+    background-color: #d2070d;
+}
+
+.musicVideo {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ;
+    padding: 3.125rem;
+    /* height: 31.25rem; */
+    /* background-color: #d2070d; */
+}
+@media (max-width:750px) {
+   .musicVideo {
+       grid-template-columns: 1fr; 
+       grid-template-rows: 1fr 1fr;
+       width: 100%;
+}
+}
+#btn {
+    display:none;
+    text-align: center;
+    background-color:#ebebf0;
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: fixed;
+    bottom: 0px;
+}
+#btn:hover {
+    background-color: #ffbb48;
+}
+
+
+/* Footer */
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    /* max-width: 1200px;
+    margin: 0 auto; */
+}
+footer a {
+    text-decoration: none;
+    color:#d2070d;
+    font-weight: bolder;
+}
+
+/* Media Queries */
